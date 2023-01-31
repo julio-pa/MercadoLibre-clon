@@ -5,7 +5,7 @@ import RightHeader from './RightHeader';
 
 const NavBar = () => {
   return (
-    <div className='bg-yellow-300 flex justify-between'>
+    <div className='bg-yellow-300 flex justify-between py-2 px-12'>
       <LeftHeader/>
       <CenterHeader/>
       <RightHeader/>
