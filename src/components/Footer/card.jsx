@@ -8,7 +8,7 @@ const Card = ({title, img, desc, link}) => {
           <div className='border-r border-solid border-gray-400 flex flex-col items-center justify-center mt-5'>
             <h3 className='text-lg text-center max-md:w-7/12'>{title}</h3>
             <p className='text-gray-400 w-10/12 text-center text-sm'>{desc}</p>
-            <p className='text-blue-500 mt-2 w-10/12 text-sm text-center'>{link}</p>
+            <p className='text-blue-500 mt-2 w-10/12 text-sm text-center hover:cursor-pointer'>{link}</p>
           </div>
         </div>
     </div>
