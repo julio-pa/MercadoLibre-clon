@@ -12,7 +12,7 @@ function App() {
     <div >
       <NavBar />
       <Banner />
-      <div className='bg-gray-200 min-h-screen p-7'>
+      <div className='bg-gray-200 p-7 pb-14'>
         <Payment />
         <Categorys/>
       </div>
