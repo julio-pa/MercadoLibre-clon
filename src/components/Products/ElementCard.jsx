@@ -1,10 +1,9 @@
 import React from 'react';
-import cel from '../../img/cel.jpg'
 
 const ElementCard = ({img,product, price}) => {
   return (
-    <div className='flex m-5'>
-      <img className='object-contain h-44 mx-10' 
+    <div className='flex m-5 hover:cursor-pointer'>
+      <img className='object-contain w-32 h-44 mx-10' 
       src={img} alt='product' />
       <div>
         <h2 className='text-2xl font-light'>{product}</h2>

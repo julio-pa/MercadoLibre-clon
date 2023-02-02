@@ -1,4 +1,43 @@
-*{
+body{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+.pagination{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  font-size: 1.2rem;
+  gap: 5px;
+}
+
+.pagination .page-num{
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: lighter;
+  color: #828787;
+}
+
+.pagination .page-num:hover{
+  background-color: #E4E4E4;  
+}
+
+.pagination .active{
+  background-color: #E4E4E4;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar{
+  background-color: #FFF;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #3483FA;
+  border-radius: 30px;
+}
+
