@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
+import ContainerDetail from './ContainerDetail';
 
 const Details = () => {
 
@@ -19,7 +21,13 @@ const Details = () => {
 
   return (
     <div>
-      <h1>Details🍰 del producto {productDetail?.title}</h1>
+      <NavBar />
+      <div className='bg-gray-200 p-5'>
+        <ContainerDetail
+        img={productDetail.img}
+        title={productDetail.title}
+        price={productDetail.price} />
+      </div>
     </div>
   );
 }
