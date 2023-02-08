@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import useCallApi from '../../hooks/CallApi';
 import PaginatedItems from './Pagination';
 
 const ProductCard = () => {
 
-  const [products, setProducts] = useState([]);
+  const url = 'http://localhost:5005/api/products';
+  const { item, loading } = useCallApi(url)
 
-  const GetProducts = () => {
-    fetch('http://localhost:5005/api/products')
-      .then(res => res.json())
-      .then(data => setProducts(data))
-
+  if (loading) {
+    return (
+      <div className='flex'>
+        <h2 className='text-2xl text-blue-600'>Cargando...</h2>
+      </div>
+    )
+  } else {
+    return (
+      <div className='m-3 w-11/12'>
+        <PaginatedItems data={item} />
+      </div>
+    )
   }
-
-  useEffect(() => {
-    GetProducts()
-  }, []);
-
-  return (
-    <div className='m-3 w-11/12'>
-      <PaginatedItems data={products} />
-    </div>
-  );
 }
 
 export default ProductCard;

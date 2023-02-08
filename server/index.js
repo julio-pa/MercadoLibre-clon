@@ -1,14 +1,19 @@
 const express = require('express');
+require('dotenv').config();
 
-const app = express()
+const productRoutes = require('./routes/product')
 
-//TODO: Crear variables de ambiente y modificar cors ademas de optimizar el codigo
+const app = express();
+const PORT = process.env.PORT || 5005;
+
+//middelware
+app.use('/api', productRoutes)
 
 //DB connection
 const mongoose = require('mongoose')
 
 mongoose.set('strictQuery', false)
-  .connect('mongodb+srv://julio-pg:NE5eX0jIJ1x8YhGk@technology.az1ziqg.mongodb.net/Products')
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log('Conectado a BBDD', mongoose.connection.name));
 
 
@@ -16,37 +21,20 @@ mongoose.set('strictQuery', false)
 const cors = require('cors')
 app.use(cors());
 
-//Model
-const Product = require('./Models/Products.model');
+const whiteList = ['http://localhost:5173','http://localhost:5005'];
 
+let corsOptions = {
+  origin: function (origin, callback){
+    if(whiteList.indexOf(origin) != -1){
+      callback(null, true);
+    } else {
+      callback(new Error('Not alloweb by CORS'))
+    }
+  }
+};
 
-const PORT = 5005
-
-
-//Routing
-app.get('/api/products', (req, res) => {
-
-  Product.find()
-    .then(allProducts => res.json(allProducts))
-})
-
-app.get('/api/details/:product_id', (req, res) => {
-  const { product_id } = req.params
-
-  Product
-    .findById(product_id)
-    .then(product => res.json(product))
-})
-
-app.get('/api/products/:category', (req, res) => {
-  const { category } = req.params
-
-  Product
-    .find()
-    .then(product => {
-     const results = product.filter(item => item.category === category);
-      res.json(results)
-    })
+app.get('/', cors(corsOptions), (req, res) => {
+  res.json({mensaje : 'ok'})
 })
 
 

@@ -13,13 +13,15 @@ const FilterCategory = () => {
   const { item, loading } = useCallApi(url);
   if (loading) {
     return (
-      <div>Loading...</div>
+      <div className='flex justify-center items-center'>
+          <h2 className='text-2xl text-blue-600 mt-10'>Cargando...</h2>
+      </div>
     )
   } else {
     return (
       <div>
         {item &&
-          <CardCategory data={item} category={category}/>
+          <CardCategory data={item} category={category} />
         }
       </div>
     )

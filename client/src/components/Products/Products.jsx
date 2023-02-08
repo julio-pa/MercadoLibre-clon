@@ -1,8 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import Filtros from './Filtros';
-import PaginatedItems from './Pagination';
-import Pagination from './Pagination';
 import ProductCard from './ProductCard';
 import ProductHeader from './ProductHeader';
 

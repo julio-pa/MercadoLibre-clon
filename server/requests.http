@@ -2,4 +2,7 @@
 GET http://localhost:5005/api/products HTTP/1.1
 
 ###
+GET http://localhost:5005/api/details/63dc257dc52ca399fd79dd76 HTTP/1.1
+
+###
 GET http://localhost:5005/api/products/ropa HTTP/1.1
