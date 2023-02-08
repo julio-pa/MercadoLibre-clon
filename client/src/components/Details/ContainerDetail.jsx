@@ -8,22 +8,27 @@ import Reputation from './Reputation';
 
 const ContainerDetail = ({ img, title, price }) => {
   return (
-    <div className='bg-white rounded-md p-4 pl-12'>
-      <div className='flex'>
+    <div className='bg-white rounded-md p-4 pl-12 max-sm:pl-4'>
+      <div className='flex max-md:flex-col'>
         <div>
           <Characteristics
             img={img}
             title={title}
             price={price} />
-          <Description />
+          <div className='max-md:hidden'>
+            <Description />
+          </div>
         </div>
-        <div className='w-4/12'>
+        <div className='w-4/12 max-md:w-full'>
           <Price />
           <Reputation />
           <Payment />
         </div>
       </div>
       <hr />
+      <div className='md:hidden'>
+        <Description />
+      </div>
       <Questions />
     </div>
   );

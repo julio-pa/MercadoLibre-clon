@@ -3,7 +3,7 @@ import React from 'react';
 const BuyButtom = () => {
   return (
     <div className='my-6'>
-      <div className='flex text-md'>
+      <div className='flex max-lg:flex-col text-md'>
         <p>Cantidad:</p>
         <select className='focus:outline-none font-semibold w-20 text-sm' name='cantidad'>
           <option>1 unidad</option>
