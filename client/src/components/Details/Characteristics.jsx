@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Characteristics = ({ img, title, price }) => {
+  //TODO: hacer funcionalidad de la lupa
   return (
     <>
       <div className='flex w-10/12'>

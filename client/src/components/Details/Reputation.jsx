@@ -9,7 +9,7 @@ const Reputation = () => {
           location_on
         </span>
         <div>
-          <h5 className='font-semibold'>Ubicación</h5>
+          <h5 className='font-normal'>Ubicación</h5>
           <p className='text-sm text-gray-400'>Azuay, Cuenca</p>
         </div>
       </div>

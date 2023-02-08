@@ -1,27 +1,27 @@
 const categorys = [
   {
-    name: "Celulares y Telefonía",
+    name: "celulares",
     icon: "phone_android"
   },
   {
-    name: "Computación",
+    name: "computación",
     icon: "computer"
   },
   {
-    name: "Construcción",
-    icon: "engineering"
+    name: "ropa",
+    icon: "laundry"
   },
   {
-    name: "Coleccionables",
+    name: "coleccionables",
     icon: "album"
   },
   {
-    name: "Consolas y Videojuegos",
+    name: "consolas",
     icon: "stadia_controller"
   },
   {
-    name: "Camaras y Accesorios",
-    icon: "photo_camera"
+    name: "belleza",
+    icon: "self_care"
   },
 ];
 

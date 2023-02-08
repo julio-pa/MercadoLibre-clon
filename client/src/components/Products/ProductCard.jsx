@@ -6,10 +6,9 @@ const ProductCard = () => {
   const [products, setProducts] = useState([]);
 
   const GetProducts = () => {
-    fetch('http://localhost:5005/api/products/')
+    fetch('http://localhost:5005/api/products')
       .then(res => res.json())
       .then(data => setProducts(data))
-    console.log(products)
 
   }
 

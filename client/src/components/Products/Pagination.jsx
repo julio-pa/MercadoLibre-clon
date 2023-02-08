@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import ElementCard from './ElementCard';
 import { Link } from 'react-router-dom';
-import routes from '../../helpers/routes';
-
 
 
 function PaginatedItems(props) {
@@ -35,9 +33,8 @@ function PaginatedItems(props) {
       <div className='bg-white overflow-hidden rounded-md p-5 mb-3'>
         {
           currentItems?.map((item) => (
-            <Link to={`/details/${item._id}`}>
+            <Link key={item._id} to={`/details/${item._id}`}>
               <ElementCard
-                key={item._id}
                 img={item.img}
                 product={item.title}
                 price={item.price}

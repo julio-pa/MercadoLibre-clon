@@ -19,7 +19,7 @@ const Payment = () => {
         <img className='w-18 h-9 object-contain' src={visaDebito} alt='visa' />
         <img className='w-16 h-9 object-contain' src={mastercardDebito} alt='mastercard' />
       </div>
-      <p className='my-4 text-blue-400 text-sm'>Conoce otros medios de pago</p>
+      <p className='my-4 text-blue-400 text-sm hover:cursor-pointer'>Conoce otros medios de pago</p>
     </div>
   );
 }

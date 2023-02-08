@@ -13,7 +13,7 @@ const Warranty = () => {
         <span className="material-symbols-outlined font-light">
         workspace_premium
         </span>
-        <pn>12 meses de garantía de fábrica.</pn>
+        <p>12 meses de garantía de fábrica.</p>
       </div>
     </div>
   );

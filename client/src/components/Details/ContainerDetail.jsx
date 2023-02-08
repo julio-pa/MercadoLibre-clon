@@ -8,7 +8,7 @@ import Reputation from './Reputation';
 
 const ContainerDetail = ({ img, title, price }) => {
   return (
-    <div className='bg-white rounded-md p-4'>
+    <div className='bg-white rounded-md p-4 pl-12'>
       <div className='flex'>
         <div>
           <Characteristics

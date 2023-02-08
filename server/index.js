@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express()
 
+//TODO: Crear variables de ambiente y modificar cors ademas de optimizar el codigo
+
 //DB connection
 const mongoose = require('mongoose')
 
@@ -34,6 +36,17 @@ app.get('/api/details/:product_id', (req, res) => {
   Product
     .findById(product_id)
     .then(product => res.json(product))
+})
+
+app.get('/api/products/:category', (req, res) => {
+  const { category } = req.params
+
+  Product
+    .find()
+    .then(product => {
+     const results = product.filter(item => item.category === category);
+      res.json(results)
+    })
 })
 
 
