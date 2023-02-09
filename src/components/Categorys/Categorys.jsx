@@ -14,7 +14,7 @@ const Categorys = () => {
               <span className="material-symbols-outlined text-7xl font-light">
                 {icon}
               </span>
-              <h6 className='text-center mt-1 uppercase'>{name}</h6>
+              <h6 className='text-center mt-1 uppercase max-sm:text-xs'>{name}</h6>
             </div>
           </Link>
         ))}

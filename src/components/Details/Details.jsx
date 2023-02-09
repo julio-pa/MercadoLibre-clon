@@ -25,7 +25,7 @@ const Details = () => {
               clock_loader_80
             </span>
           </div>
-          : <div className='bg-gray-200 px-12 py-20 max-sm:py-2'>
+          : <div className='bg-gray-200 px-12 py-20 max-sm:px-2'>
             <ContainerDetail
               img={item.img}
               title={item.title}

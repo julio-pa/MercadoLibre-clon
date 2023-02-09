@@ -46,11 +46,11 @@ function PaginatedItems(props) {
       </div>
       <ReactPaginate
         breakLabel="..."
-        nextLabel="siguiente >"
+        nextLabel="next>"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         pageCount={pageCount}
-        previousLabel="< anterior"
+        previousLabel="<prev"
         renderOnZeroPageCount={null}
         containerClassName="pagination"
         pageLinkClassName="page-num"
