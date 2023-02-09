@@ -13,9 +13,9 @@ const ImageMagnify = ({ imageSrc }) => {
   };
 
   return (
-    <div  className='w-7/12 h-96 object-contain hover:cursor-zoom-in mr-3 max-sm:hidden' >
+    <div  className='w-7/12 h-2/4 object-contain hover:cursor-zoom-in mr-3 max-sm:hidden' >
       <img
-        className='w-7/12 h-96 object-contain hover:cursor-zoom-in mr-3'
+        className=' object-contain h-96 hover:cursor-zoom-in'
         src={imageSrc}
         onClick ={handleZoom}
         style={{ cursor: 'zoom-in' }}

@@ -1,6 +1,8 @@
 const express = require('express');
 
 const router = express.Router();
+const cors = require('cors')
+
 
 //Model
 const Product = require('../Models/Products.model');
@@ -13,7 +15,7 @@ router.get('/products', (req, res) => {
 });
 
 //get products by ID
-router.get('/details/:product_id', (req, res) => {
+router.get('/details/:product_id', cors(), (req, res) => {
   const { product_id } = req.params
 
   Product

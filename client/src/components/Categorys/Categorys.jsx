@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { categorys } from '../../mock/mockData';
 
 
-//TODO: cambiar los iconos de construccion y camaras por ropa y belleza
 const Categorys = () => {
   return (
     <div>

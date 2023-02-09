@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import useCallApi from '../../hooks/CallApi';
 import NavBar from '../NavBar/NavBar';
@@ -20,7 +20,11 @@ const Details = () => {
       <NavBar />
       {
         loading
-          ? <div>Cargando</div>
+          ? <div className='flex justify-center items-center h-screen'>
+            <span className="material-symbols-outlined animate-spin text-9xl text-blue-600">
+              clock_loader_80
+            </span>
+          </div>
           : <div className='bg-gray-200 px-12 py-20'>
             <ContainerDetail
               img={item.img}

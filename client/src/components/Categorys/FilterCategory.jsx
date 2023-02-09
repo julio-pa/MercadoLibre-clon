@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useCallApi from '../../hooks/CallApi';
+import NavBar from '../NavBar/NavBar';
 import CardCategory from './CardCategory';
 
 
@@ -13,9 +14,14 @@ const FilterCategory = () => {
   const { item, loading } = useCallApi(url);
   if (loading) {
     return (
-      <div className='flex justify-center items-center'>
-          <h2 className='text-2xl text-blue-600 mt-10'>Cargando...</h2>
-      </div>
+      <>
+        <NavBar />
+        <div className='flex justify-center items-center h-screen'>
+          <span className="material-symbols-outlined animate-spin text-9xl text-blue-600">
+            clock_loader_80
+          </span>
+        </div>
+      </>
     )
   } else {
     return (
