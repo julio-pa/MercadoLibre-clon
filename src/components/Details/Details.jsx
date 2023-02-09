@@ -11,7 +11,7 @@ const Details = () => {
   const { product_id } = useParams();
 
 
-  const url = `http://localhost:5005/api/details/${product_id}`;
+  const url = `https://jp-api-mercado-libre-clon.onrender.com/api/details/${product_id}`;
 
   const { item, loading } = useCallApi(url)
 

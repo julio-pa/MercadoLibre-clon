@@ -9,7 +9,7 @@ const FilterCategory = () => {
 
   const { category } = useParams();
 
-  const url = `http://localhost:5005/api/products/${category}`;
+  const url = `https://jp-api-mercado-libre-clon.onrender.com/api/products/${category}`;
 
   const { item, loading } = useCallApi(url);
   if (loading) {

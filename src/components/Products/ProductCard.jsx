@@ -4,7 +4,7 @@ import PaginatedItems from './Pagination';
 
 const ProductCard = () => {
 
-  const url = 'http://localhost:5005/api/products';
+  const url = 'https://jp-api-mercado-libre-clon.onrender.com/api/products';
   const { item, loading } = useCallApi(url)
 
   if (loading) {
