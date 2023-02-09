@@ -21,22 +21,5 @@ mongoose.set('strictQuery', false)
 const cors = require('cors')
 app.use(cors());
 
-const whiteList = ['http://localhost:5173','http://localhost:5005'];
-
-let corsOptions = {
-  origin: function (origin, callback){
-    if(whiteList.indexOf(origin) != -1){
-      callback(null, true);
-    } else {
-      callback(new Error('Not alloweb by CORS'))
-    }
-  }
-};
-
-app.get('/', cors(corsOptions), (req, res) => {
-  res.json({mensaje : 'ok'})
-})
-
-
 app.listen(PORT, () => console.log(`Servidor levantado en 
 http://localhost:${PORT}`))
