@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../../helpers/routes';
-import logo from '../../img/Mercado-Libre-Logo.png'
+import logo from '../../img/Logo-Dev-music.svg'
 
 const LeftHeader = () => {
   return (

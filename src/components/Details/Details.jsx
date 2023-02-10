@@ -33,7 +33,7 @@ const Details = () => {
           </div>
       }
       <div>
-        <p className='text-gray-400 mt-5 p-7 text-xs'>Copyright © 1999-2023 MercadoLibre Ecuador Cia. Ltda.</p>
+        <p className='text-gray-400 mt-5 p-7 text-xs'>Copyright © 1999-2023 JP-Mercado-Libre-Clon</p>
       </div>
     </div>
   );
